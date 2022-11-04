@@ -1,5 +1,6 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import useStore from "./store/store";
+import clsx from "clsx";
 import "./App.scss";
 import Todos from "./components/Todos";
 import Header from "./components/Header";
@@ -15,6 +16,7 @@ function App() {
     <div className={AppClasses}>
       <Header />
       <Todos />
+      <Footer />
     </div>
   );
 }

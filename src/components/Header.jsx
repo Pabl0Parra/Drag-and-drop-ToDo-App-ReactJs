@@ -1,6 +1,6 @@
 import ThemeToggler from "./ThemeToggler";
 
-export default function Header() {
+const Header = () => {
   return (
     <header className="header">
       <div className="container">
@@ -9,4 +9,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;

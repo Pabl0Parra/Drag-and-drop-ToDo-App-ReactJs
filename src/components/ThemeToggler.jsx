@@ -1,4 +1,4 @@
-import useStore from "../store";
+import useStore from "../store/store";
 import IconSun from "../assets/icon-sun.svg";
 import IconMoon from "../assets/icon-moon.svg";
 
