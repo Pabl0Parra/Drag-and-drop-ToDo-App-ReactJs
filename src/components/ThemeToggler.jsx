@@ -5,6 +5,7 @@ import IconMoon from "../assets/icon-moon.svg";
 const ThemeToggler = () => {
   const theme = useStore((state) => state.theme);
   const setTheme = useStore((state) => state.setTheme);
+
   const handleThemeToggleClick = () => {
     if (theme === "dark") {
       setTheme("light");
@@ -12,6 +13,7 @@ const ThemeToggler = () => {
       setTheme("dark");
     }
   };
+
   return (
     <button className="toggler" onClick={handleThemeToggleClick}>
       {theme === "dark" ? (

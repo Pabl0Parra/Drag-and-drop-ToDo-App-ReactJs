@@ -1,5 +1,6 @@
 import useStore from "../store/store";
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import useFetch from "../hooks/useFetch";
 
 const AddTodo = () => {
@@ -32,7 +33,7 @@ const AddTodo = () => {
               ...todos,
               {
                 userId: 1,
-                id: todos.length + 1,
+                id: uuidv4(),
                 title: newTodo,
                 completed: false,
               },

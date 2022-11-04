@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AddTodo from "./Components/AddTodo";
 
-function App() {
+const App = () => {
   const theme = useStore((state) => state.theme);
   const AppClasses = clsx({
     App: true,
@@ -21,6 +21,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
