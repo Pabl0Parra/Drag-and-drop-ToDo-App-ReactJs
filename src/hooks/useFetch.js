@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function useFetch(baseUrl) {
+const useFetch = (baseUrl) => {
   const [loading, setLoading] = useState(true);
 
   function get(url) {
@@ -50,4 +50,6 @@ export default function useFetch(baseUrl) {
   }
 
   return { get, post, loading };
-}
+};
+
+export default useFetch;
