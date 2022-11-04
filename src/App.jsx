@@ -5,6 +5,7 @@ import "./App.scss";
 import Todos from "./components/Todos";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import AddTodo from "./Components/AddTodo";
 
 function App() {
   const theme = useStore((state) => state.theme);
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className={AppClasses}>
       <Header />
+      <AddTodo />
       <Todos />
       <Footer />
     </div>

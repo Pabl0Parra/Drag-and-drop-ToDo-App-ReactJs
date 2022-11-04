@@ -2,7 +2,7 @@ import useStore from "../store/store";
 import IconSun from "../assets/icon-sun.svg";
 import IconMoon from "../assets/icon-moon.svg";
 
-export default function ThemeToggler() {
+const ThemeToggler = () => {
   const theme = useStore((state) => state.theme);
   const setTheme = useStore((state) => state.setTheme);
   const handleThemeToggleClick = () => {
@@ -21,4 +21,6 @@ export default function ThemeToggler() {
       )}
     </button>
   );
-}
+};
+
+export default ThemeToggler;

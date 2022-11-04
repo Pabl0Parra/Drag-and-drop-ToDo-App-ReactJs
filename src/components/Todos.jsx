@@ -27,7 +27,7 @@ const getListStyle = (isDraggingOver) => ({
 
 const Todos = () => {
   const { get, loading } = useFetch(
-    "Https://my-json-server.typicode.com/Pabl0Parra/json-server-data/"
+    "https://my-json-server.typicode.com/Pabl0Parra/json-server-data/"
   );
   const todos = useStore((state) => state.todos);
   const setTodos = useStore((state) => state.setTodos);
