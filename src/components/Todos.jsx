@@ -1,11 +1,11 @@
 import Todo from "./Todo";
 import Loader from "./Loader";
 import useStore from "../store/store";
+import TodosFilter from "./TodosFilter";
 import { useEffect } from "react";
 import useFetch from "../Hooks/useFetch";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-const grid = 8;
 const getItemStyle = (isDragging, draggableStyle) => ({
   // some basic styles to make the items look a bit nicer
   userSelect: "none",
@@ -53,41 +53,44 @@ const Todos = () => {
 
   return (
     <>
-      <DragDropContext onDragEnd={handleDragEnd}>
-        <Droppable droppableId="droppable">
-          {(provided, snapshot) => (
-            <div
-              className={`todos ${snapshot.isDraggingOver ? "dragging" : ""}`}
-              {...provided.droppableProps}
-              ref={provided.innerRef}
-            >
-              {todos.map((todo, index) => (
-                <Draggable
-                  key={todo.id}
-                  draggableId={`todo-${todo.id}`}
-                  index={index}
-                >
-                  {(provided, snapshot) => (
-                    <div
-                      className={`todo${todo.completed ? " completed" : ""}`}
-                      ref={provided.innerRef}
-                      {...provided.draggableProps}
-                      {...provided.dragHandleProps}
-                      style={getItemStyle(
-                        snapshot.isDragging,
-                        provided.draggableProps.style
-                      )}
-                    >
-                      <Todo key={todo.id} todo={todo} />
-                    </div>
-                  )}
-                </Draggable>
-              ))}
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
-      </DragDropContext>
+      <div className="todos-wrap">
+        <DragDropContext onDragEnd={handleDragEnd}>
+          <Droppable droppableId="droppable">
+            {(provided, snapshot) => (
+              <div
+                className={`todos ${snapshot.isDraggingOver ? "dragging" : ""}`}
+                {...provided.droppableProps}
+                ref={provided.innerRef}
+              >
+                {todos.map((todo, index) => (
+                  <Draggable
+                    key={todo.id}
+                    draggableId={`todo-${todo.id}`}
+                    index={index}
+                  >
+                    {(provided, snapshot) => (
+                      <div
+                        className={`todo${todo.completed ? " completed" : ""}`}
+                        ref={provided.innerRef}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        style={getItemStyle(
+                          snapshot.isDragging,
+                          provided.draggableProps.style
+                        )}
+                      >
+                        <Todo key={todo.id} todo={todo} />
+                      </div>
+                    )}
+                  </Draggable>
+                ))}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </DragDropContext>
+        <TodosFilter />
+      </div>
     </>
   );
 };
