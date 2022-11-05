@@ -10,7 +10,7 @@ const Todo = ({ todo }) => {
   };
 
   return (
-    <div>
+    <div className="t-todo">
       {todo.title}
       <button onClick={handleRemoveTodo}>X</button>
     </div>

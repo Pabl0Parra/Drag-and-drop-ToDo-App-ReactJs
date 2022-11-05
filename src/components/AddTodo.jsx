@@ -51,6 +51,7 @@ const AddTodo = () => {
 
   return (
     <div className="input-box">
+      <div className="input-box__circle"></div>
       <label className="sr-only" htmlFor="newTodo">
         add new todo
       </label>
@@ -58,6 +59,7 @@ const AddTodo = () => {
         type="text"
         id="newTodo"
         name="newTodo"
+        className="input-box__input"
         value={newTodo}
         disabled={isAdding}
         onKeyDown={handleKeyDown}

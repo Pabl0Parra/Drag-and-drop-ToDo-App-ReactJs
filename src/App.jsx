@@ -12,6 +12,7 @@ const App = () => {
   const AppClasses = clsx({
     App: true,
     dark: theme === "dark",
+    light: theme !== "dark",
   });
   return (
     <div className={AppClasses}>
