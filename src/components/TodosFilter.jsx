@@ -16,7 +16,7 @@ const TodosFilter = () => {
         items left
       </p>
       <FilterRadio />
-      <button>Clear Completed</button>
+      <button>Clear completed</button>
     </div>
   );
 };
