@@ -5,7 +5,7 @@ import TodosFilter from "./TodosFilter";
 import { useState, useEffect } from "react";
 import useFetch from "../Hooks/useFetch";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import EmptyList from "./EmptyListHandler";
+import EmptyListHandler from "./EmptyListHandler";
 
 const Todos = () => {
   const { get, loading } = useFetch(

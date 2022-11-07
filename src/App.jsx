@@ -23,7 +23,7 @@ const App = () => {
       <Header />
       <AddTodo />
       <Todos />
-      {todos.length > 0 && <FloatingRadioFilter />}
+
       {todos.length > 0 && <BottomNotification />}
       <Footer />
     </div>
