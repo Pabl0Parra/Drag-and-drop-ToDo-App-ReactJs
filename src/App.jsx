@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AddTodo from "./components/AddTodo";
 import FloatingRadioFilter from "./components/FilterRadio";
-import BottomNotification from "./Components/BottomNotification";
+import BottomNotification from "./components/BottomNotification";
 
 const App = () => {
   const theme = useStore((state) => state.theme);
