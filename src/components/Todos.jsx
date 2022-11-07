@@ -3,7 +3,7 @@ import Loader from "./Loader";
 import useStore from "../store/store";
 import TodosFilter from "./TodosFilter";
 import { useState, useEffect } from "react";
-import useFetch from "../Hooks/useFetch";
+import useFetch from "../hooks/useFetch";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import EmptyListHandler from "./EmptyListHandler";
 
