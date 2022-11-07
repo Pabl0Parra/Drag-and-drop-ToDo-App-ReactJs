@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <p>Made with love | Pabl0Parra</p>;
+  return <p className="footer">Made with ❤️ | Pabl0Parra</p>;
 };
 
 export default Footer;
