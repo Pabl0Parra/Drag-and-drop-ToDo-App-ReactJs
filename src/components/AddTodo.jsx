@@ -9,7 +9,7 @@ const AddTodo = () => {
   const [isAdding, setIsAdding] = useState(false);
   const setTodos = useStore((state) => state.setTodos);
   const { post } = useFetch(
-    "http://my-json-server.typicode.com/Pabl0Parra/json-server-data/"
+    "https://my-json-server.typicode.com/Pabl0Parra/json-server-data/"
   );
 
   const handleNewTodoChange = (event) => {
