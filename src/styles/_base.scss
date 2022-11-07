@@ -125,8 +125,12 @@ button {
   .App {
     overflow-x: hidden;
     overflow-y: scroll;
-    padding-bottom: 12.6rem;
+    padding-bottom: 7.1rem;
     background-color: var(--bg-app);
     transition: var(--transition) background-color;
+
+    @media (min-width: 768px) {
+      padding-bottom: 5.1rem;
+    }
   }
 }
