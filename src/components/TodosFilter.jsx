@@ -3,10 +3,14 @@ import FilterRadio from "./FilterRadio";
 
 const TodosFilter = () => {
   const todos = useStore((state) => state.todos);
+  const setTodos = useStore((state) => state.setTodos);
+
+  const handleClearCompletedClick = () =>
+    setTodos(todos.filter(({ completed }) => completed === false));
 
   return (
     <div className="todos-filter">
-      <p className="todos-status">
+      <p className="todos-status t-status">
         <span>
           {todos.reduce((counter, todo) => {
             if (!todo.completed) counter++;
@@ -16,7 +20,12 @@ const TodosFilter = () => {
         items left
       </p>
       <FilterRadio />
-      <button>Clear completed</button>
+      <button
+        onClick={handleClearCompletedClick}
+        className="t-status btn btn--clear-completed"
+      >
+        Clear Completed
+      </button>
     </div>
   );
 };
