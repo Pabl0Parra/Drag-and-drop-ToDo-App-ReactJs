@@ -5,6 +5,7 @@ import TodosFilter from "./TodosFilter";
 import { useState, useEffect } from "react";
 import useFetch from "../Hooks/useFetch";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import EmptyList from "./EmptyListHandler";
 
 const Todos = () => {
   const { get, loading } = useFetch(
@@ -46,8 +47,8 @@ const Todos = () => {
   };
 
   if (loading) return <Loader />;
-  if (isError) return "Error on fetching";
-  if (todos.length === 0) return "Todo list is empty";
+  if (isError) return <EmptyListHandler isError={true} />;
+  if (todos.length === 0) return <EmptyListHandler />;
 
   return (
     <>
