@@ -1,6 +1,6 @@
 # Drag-and-drop ToDo app made with ReactJs & Vite
 
-Site is live @https://dragmytodo.netlify.app/
+Site is live @https://tododragdrop.vercel.app/
 
 This is a drag&drop Todo app that has dark/light theme capabilities. I have used:
 - [zustand](https://docs.pmnd.rs/zustand/recipes/recipes) to manage the store,
